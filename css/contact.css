@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+main {
+    padding: 0px 20px;
+    margin-top: 150px;
+}
+
+main > section > section {
+    margin-top: 20px;
+    line-height: 1.6rem;
+}
+
+
+/*==================================レスポンシブ 834px以下　ここから=====================================*/
+@media screen and (max-width: 834px) {
+    main {
+        padding: 0px 15px;
+        margin-top: 100px;
+    }
+}
+/*==================================レスポンシブ 834px以下　ここまで=====================================*/

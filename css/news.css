@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+main {
+    padding: 0px 20px;
+    margin-top: 150px;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+main > section > section {
+    margin-top: 20px;
+}
+
+main > section > section > article {
+    border-bottom: 1px solid #666;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+main > section > section > article > dl:not(.cont_img) > dt {
+    max-height: 400px;
+    margin-bottom: 30px;
+}
+main > section > section > article > dl > dd {
+    line-height: 1.6rem;
+    margin-top: -5px;
+}
+
+main > section > section > article > dl > dt iframe {
+    width: 100%;
+    height: 400px;
+}
+
+main > section > section > article > dl > dt a {
+    display: block;
+}
+
+main > section > section > article > dl > dt img {
+    width: auto;
+    max-height: 400px;
+    max-width: 100%;
+}
+
+.cont_img {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+/*.cont_img > dt {
+    max-width: 50%;
+}*/
+.cont_img > dd {
+    padding-left: 20px;
+}
+
+.cont_img > dd a {
+    color: rgb(13, 169, 217);
+}
+
+
+/*==================================レスポンシブ 834px以下　ここから=====================================*/
+@media screen and (max-width: 834px) {
+    main {
+        padding: 0px 15px;
+        margin-top: 100px;
+    }
+
+    main > section > section > article > dl > dt {
+        max-height: 100% !important;
+        margin-bottom: 15px !important;
+    }
+
+    main > section > section > article > dl > dt iframe {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        aspect-ratio: 16 / 9;
+    }
+
+    .cont_img {
+        display: block;
+    }
+
+    main > section > section > article > dl > dd {
+        line-height: 26px;
+        margin-top: 0px;
+    }
+
+    main > section > section > article > dl > * {
+        display: block;
+        word-break: break-all;
+        font-size: 0.9rem;
+    }
+
+    main > section > section > article > dl > * img {
+        display: block;
+        max-width: 100%;
+        width: auto !important;
+        height: auto;
+        margin: auto;
+        max-height: 300px !important;
+    }
+
+    .cont_img > dd {
+        padding: 0px;
+        
+    }
+
+    main > section > section {
+        margin-top: 20px;
+    }
+}
+/*==================================レスポンシブ 834px以下　ここまで=====================================*/

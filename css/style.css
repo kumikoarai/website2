@@ -1,0 +1,349 @@
+@charset "UTF-8";
+
+@import url("./reset.css");
+
+@font-face {
+    font-family: LetterGothicStd;
+    src: url(../font/LetterGothicStd.woff) format("woff");
+}
+
+html, * {
+    box-sizing: border-box;
+    font-family: LetterGothicStd, "游明朝体", YuMincho, "Yu Mincho Demibold", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", serif;
+    font-weight: normal;
+    font-size: 12px;
+}
+header,
+footer {
+    width: 300px;
+    position: fixed;
+}
+
+header {
+    top: 0px;
+    left: 0px;
+}
+
+footer {
+    bottom: 50px;
+    left: 0px;
+    font-size: 0.8rem;
+    padding-left: 50px;
+}
+
+main {
+    width: calc(100% - 300px);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+address {
+    font-style: normal;
+}
+
+/*=======↓↓↓headerここから↓↓↓=========*/
+header h1 {
+    height: 150px;
+}
+
+header h1 a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 0px;
+    padding: 0px 57px 0px 43px;
+    /*justify-content: center;*/
+    align-items: center;
+}
+header h1 a img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.ham_btn {
+    display: none;
+}
+/*=======↑↑↑headerここまで↑↑↑=========*/
+
+/*=======↓↓↓navここから↓↓↓=========*/
+nav {
+    height: calc(100vh - 225px - 50px - 15px);
+    margin-left: 50px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling:touch;
+    font-size: 15px;
+}
+
+
+nav > ul > li {
+    margin-bottom: 70px;
+}
+
+nav > ul > li > p {
+    /*margin-bottom: 20px;*/
+    height: 25px;
+}
+
+/*nav > ul > li > ul > li:not(:last-of-type) {
+    margin-bottom: 20px;
+}*/
+nav > ul > li > ul > li {
+    word-break: break-all;
+    height: 35px;
+    line-height: 35px;
+}
+
+#sns > ul {
+    font-size: 0px;
+}
+
+#sns > ul > li {
+    display: inline-block;
+    margin: 0px;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+nav > ul > li:not(#sns) a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/*=======↑↑↑navここまで↑↑↑=========*/
+
+/*=======↓↓↓mainここから↓↓↓=========*/
+main {
+    padding: 20px 0px;
+}
+main > section {
+    width: 100%;
+    height: auto;
+}
+
+main > section > ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main > section > ul > li {
+    width: 33.3%;
+    list-style: none;
+    padding: 15px 20px 25px 20px;
+}
+
+main > section > ul > li > a {
+    display: block;
+}
+
+main > section > ul > li > a > span {
+    display: block;
+    font-size: 0px;
+    text-align: center;
+    overflow: hidden;
+}
+
+main > section > ul > li > a > span:nth-of-type(2) {
+    font-size: 1rem;
+    padding-top: 10px;
+}
+
+main > section > ul > li img {
+    width: 100%;
+    height: auto;
+    transition: 0.7s;
+}
+
+main > section > ul > li img:hover {
+    transform: scale(1.045)
+}
+
+main > section h2 {
+    font-size: 15px;
+}
+
+#artists_top > ul > li > a > span:nth-of-type(2) {
+    font-size: 15px;
+}
+/*=======↑↑↑mainここまで↑↑↑=========*/
+
+/*==================================レスポンシブ 835px以上　ここから=====================================*/
+@media screen and (min-width: 835px) {
+    main > section > ul > li a:hover img {
+        transform: scale(1.045)
+    }
+
+    nav > ul > li a {
+        color: #aaa;
+        transition: 0.3s;
+    }
+
+    nav > ul > li a:hover {
+        color: #000;
+    }
+}
+/*==================================レスポンシブ 835px以上　ここまで=====================================*/
+
+/*==================================レスポンシブ 834px以下　ここから=====================================*/
+@media screen and (max-width: 834px) {
+    html, * {
+        font-size: 15px;
+    }
+    
+    footer,
+    main {
+        width: 100%;
+        position: static;
+    }
+
+    /*=======↓↓↓headerここから↓↓↓=========*/
+    header {
+        width: 100%;
+        padding: 0px 10px;
+        background: rgba(255,255,255,0.8);
+        z-index: 1;
+    }
+
+    header h1 {
+        height: 100px;
+        background: rgba(255,255,255,1);
+
+    }
+
+    header h1 a {
+        width: calc(100% - 50px);
+        padding: 0px;
+    }
+
+    header h1 a img {
+        width: 135px;
+    }
+
+    .ham_btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: fixed;
+        top: calc(50px - 15px);
+        right: 15px;
+    }
+
+    .ham_btn > span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .ham_btn > span > span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+        top: calc(50% - 1px);
+        left: 0px;
+    }
+    .ham_btn > span > span::before {
+        content: "";
+        display: block;
+        width: calc(100% - 5px);
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        transition: 0.3s;
+    }
+    .ham_btn > span >  span::after {
+        content: "";
+        display: block;
+        width: calc(100% - 5px);
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        transition: 0.3s;
+    }
+
+    .show_nav > span > span {
+        background-color: #fff;
+    }
+
+    .show_nav > span > span::before {
+        transform: rotate(45deg);
+        transform-origin: 0% 0%;
+        width: 41px;
+        top: -14px;
+        left: 1px;
+    }
+
+    .show_nav > span >  span::after {
+        transform: rotate(-45deg);
+        transform-origin: 0% 0%;
+        width: 41px;
+        top: 15px;
+    }
+
+    /*=======↑↑↑headerここまで↑↑↑=========*/
+
+    /*=======↓↓↓navここから↓↓↓=========*/
+    nav {
+        height: calc(100vh - 100px);
+        margin-left: 20px;
+        margin-right: 20px;
+        display: none;
+        padding-top: 20px;
+    }
+
+
+    nav > ul > li {
+        margin-bottom: 80px;
+    }
+
+    nav > ul > li  a {
+        display: block;
+    }
+
+    #sns {
+        margin-bottom: 20px;
+    }
+    /*=======↑↑↑navここまで↑↑↑=========*/
+
+    /*=======↓↓↓mainここから↓↓↓=========*/
+    main {
+        margin-top: 100px;
+        padding-top: 0px;
+        margin-bottom: 100px;
+    }
+    main > section > ul {
+        display: block;
+    }
+    
+    main > section > ul > li {
+        width: 100%;
+        padding: 15px;
+    }
+    main > section > ul > li:first-of-type {
+        padding-top: 0px;
+    }
+    
+    /*=======↑↑↑mainここまで↑↑↑=========*/
+
+    /*=======↓↓↓footerここから↓↓↓=========*/
+    footer {
+        text-align: center;
+        padding: 0px;
+    }
+    /*=======↑↑↑footerここまで↑↑↑=========*/
+
+}
+/*==================================レスポンシブ 834px以下　ここまで=====================================*/
